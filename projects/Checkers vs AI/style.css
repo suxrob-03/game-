@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #585858;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+canvas {
+  border: 2px solid #222;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 2%;
+  }
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+}

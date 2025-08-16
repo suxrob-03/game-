@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #000000c3;
+  position: relative;
+
+  video {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  h1 {
+    background-color: rgba(137, 137, 136, 0.402);
+    font-size: 6rem;
+    font-family: cursive;
+    text-align: center;
+    letter-spacing: 12px;
+    color: aliceblue;
+    padding-top: 20px;
+    border-bottom: 1px solid black;
+  }
+  .container_boxGame {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    padding: 70px 0;
+    width: 100%;
+    height: auto;
+    border: inherit;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+
+    .boxGame_cards {
+      width: calc(100% / 4);
+      height: 300px;
+      border: 1px solid snow;
+      background-color: rgb(22, 22, 22);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 1s;
+      cursor: pointer;
+
+      .card_top {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: all 1s;
+
+        img {
+          border-radius: 16px;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+        }
+      }
+      .card_bottom {
+        height: 30%;
+        padding: 20px 8%;
+
+        button {
+          transition: all 1s;
+
+          padding: 12px 24px;
+          height: auto;
+          width: 100%;
+          background: linear-gradient(
+            90deg,
+            #ffb60a 0%,
+            #f0f035 35%,
+            #dc8922b6 100%
+          );
+          border-radius: 16px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+          transform: translateY(-400px);
+
+          a {
+            text-decoration: none;
+            font-size: 24px;
+            letter-spacing: 6px;
+            font-family: cursive;
+            font-weight: 800;
+            color: rgb(8, 0, 255);
+          }
+        }
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        .card_top {
+          height: 70%;
+        }
+
+        .card_bottom {
+          button {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+
+  //   box_popup
+
+  .box_popup {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: #3b3a3a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+   
+    h2 {
+      margin-top: 240px;
+      background-color: #3e3e3ecb;
+      height: 110px;
+      display: block;
+      overflow: hidden;
+      text-align: center;
+      font-size: 5rem;
+      font-family: cursive;
+      font-weight: bold;
+      color: whitesmoke;
+    }
+    button {
+      display: block;
+      margin: 100px auto 20px;
+      font-size: 4rem;
+      font-family: cursive;
+      font-weight: bold;
+      letter-spacing: 8px;
+      padding: 24px 62px;
+      width: auto;
+      border-radius: 24px;
+      outline: hidden;
+      border: none;
+      background-color: rgba(78, 84, 80, 0.74);
+      color: rgb(177, 255, 20);
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: transparent;
+        border: 4px solid rgb(177, 255, 20);
+      }
+    }
+  }
+}
